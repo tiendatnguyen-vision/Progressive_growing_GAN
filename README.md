@@ -1,6 +1,8 @@
 Steps for training:
-# Step 1: Create 2 empty folders under this repository, named "datasets" and "results"
-# Step 2: Download dataset and extract under this repository 
+# Step 1: 
+Create 2 empty folders under this repository, named "datasets" and "results"
+# Step 2: 
+Download dataset and extract under this repository 
 After step 1 and step 2, we have these directory:
 
 ![image](https://user-images.githubusercontent.com/67949536/117542287-35179480-b042-11eb-9d2c-494b1fde00aa.png)
@@ -12,6 +14,8 @@ https://drive.google.com/file/d/114gKucljINsAZPI0p1nkqUibSB2Os400/view?usp=shari
 This dataset contains images of size (128,128) and has the class "NORMAL". 
 
 After extracting, we have this structure: 
+
+
 ![image](https://user-images.githubusercontent.com/67949536/117542414-c2f37f80-b042-11eb-8f36-c9ddf8a36698.png)
 
 
@@ -20,6 +24,7 @@ After extracting, we have this structure:
 python dataset_tool.py create_from_images datasets/pneumonia Pneumonia_NORMAL_128x128 
 After this, it would create some tf-records file into the folder "datasets/pneumonia".
 Like this: 
+
 ![image](https://user-images.githubusercontent.com/67949536/117542499-16fe6400-b043-11eb-9981-d23a27ff3986.png)
 
 
