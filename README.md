@@ -1,4 +1,6 @@
 Steps for training:
+# Step 0:
+Install all required libraries by running command: pip install -r requirements-pip.txt
 # Step 1: 
 Create 2 empty folders under this repository, named "datasets" and "results"
 # Step 2: 
@@ -20,7 +22,8 @@ After extracting, we have this structure:
 
 
 
-# Step 3: Prepare dataset for training by running command: 
+# Step 3: 
+Prepare dataset for training by running command: 
 python dataset_tool.py create_from_images datasets/pneumonia Pneumonia_NORMAL_128x128 
 After this, it would create some tf-records file into the folder "datasets/pneumonia".
 Like this: 
@@ -31,6 +34,7 @@ Like this:
 These files would be loaded and used for training model 
 
 # Step 4: Modify file config.py
+This file contains all configures for our training
 Some important variables to modify:
 - The variable "data_dir" and "result_dir" in line 21, 22 
 - The line 53 means that our tf-records files are under the directory "pneumonia"
@@ -38,4 +42,8 @@ Some important variables to modify:
 
 The more detailed guidance can be found in the "Training networks" section in the original project link: https://github.com/tkarras/progressive_growing_of_gans
 
+# Step 5: Train model 
+Run the file train.py 
 
+# Notice
+This Progressive Grow GAN will learn to generate images that have the same size as our original dataset, for example if we use the dataset Pneumonia_NORMAL_128x128 as above, then it will learn to generate images of size (128,128). 
